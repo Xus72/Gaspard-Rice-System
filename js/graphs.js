@@ -21,10 +21,10 @@ var i, j, l;
 // forrmula : 
 // (height-edge)/scale = 8 and
 // (width-edge)/scale = 8 
-var width=500;
-var height=500;
-var scale=60;
-var edge=20;
+var width=400;
+var height=400;
+var scale=48;
+var edge=16;
 
 // Initial number of reflexions   
 // set to 0 for the current input 
@@ -304,7 +304,7 @@ function drawPath() {
 	ctx.moveTo((x_begin*scale)+(width-edge)/2+edge, -(y_begin*scale)+(height-edge)/2);
 	ctx.lineTo((x_final*scale)+(width-edge)/2+edge, -(y_final*scale)+(height-edge)/2);
 	ctx.closePath();
-	ctx.strokeStyle = 'blue';
+	ctx.strokeStyle = 'red';
 	ctx.stroke();
 
 	// Compute the new straight line equation //
@@ -555,7 +555,7 @@ function drawPathEnd() {
 	ctx.moveTo((x_final*scale)+(width-edge)/2+edge, (-y_final*scale)+(height-edge)/2);
 	ctx.lineTo((t*scale)+(width-edge)/2+edge, (-yt*scale)+(height-edge)/2);
 	ctx.closePath();
-	ctx.strokeStyle = 'blue';
+	ctx.strokeStyle = 'red';
 	ctx.stroke();
 
 	// 4 possible directions for output //
