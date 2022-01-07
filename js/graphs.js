@@ -244,7 +244,14 @@ function initGraphics() {
 		ctx.beginPath();
 		ctx.lineWidth = 0.5;
 		ctx.arc((xc[j]*scale)+(width-edge)/2+edge, -(yc[j]*scale)+(height-edge)/2, radius*scale, 0, 2 * Math.PI, false);
-		ctx.fillStyle = '#B3B3BC';
+		if (j == 0){
+			ctx.fillStyle = '#3BC14A';
+		}else if (j == 1){
+			ctx.fillStyle = '#ffe066';
+		}else{
+			ctx.fillStyle = '#247ba0';
+		}
+		
 		ctx.fill();
 		ctx.stroke();
 	}

@@ -5,25 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="p-2 my-4 rounded-3">
-            <form class="form-horizontal">
-                <fieldset> 
-                    <label>Input ordinate (between -2.25 et 2.25):</label>
-                    <input type="text" id="ordinateId" class="input-medium search-query" class="input-medium search-query" placeholder="Insert b value" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-dark" type="button" id="startbuttonId">Start</button>
-                    &nbsp;&nbsp;Take for example <strong> b=0.33005 </strong> and <strong> b=0.33010 </strong> to check the chaotic behavior.
-                </fieldset> 
-                <fieldset> 
-                    <label>Output angle (in radian):</label>
-                    <input type="text" id="outputAngle" class="input-medium search-query"/>
-                </fieldset> 
-            </form>
-        </div>
-        <div class="d-flex flex-row justify-content-center">
-            <div class="rounded-3">
-                <canvas class="center" id="plot" width="500" height="500"></canvas>
-                <script type="text/javascript" src="js/graphs.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col align-items-start">
+                <div class="p-2 my-5 border rounded-3 bg-light">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-10">Input ordinate (between -2.25 et 2.25):</label>
+                            <div class="d-flex flex-row col-sm-10 my-3">
+                            <input type="text" id="ordinateId" class="form-control input-medium search-query" class="input-medium search-query" placeholder="Insert b value" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-info" type="button" id="startbuttonId">Start</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-10">Output angle (in radian):</label>
+                            <div class="d-flex flex-row col-sm-10 my-3">
+                            <input type="text" id="outputAngle" class="form-control input-medium search-query"/>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+                &nbsp;Take for example <strong> b=0.33005 </strong> and <strong> b=0.33010 </strong> to check the chaotic behavior.
+            </div>
+            <div class="col align-items-center">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="p-5 rounded-3">
+                        <canvas class="center" id="plot" width="500" height="500"></canvas>
+                        <script type="text/javascript" src="js/graphs.js"></script>
+                    </div>
+                </div>
             </div>
         </div>   
     </div>
