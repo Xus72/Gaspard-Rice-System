@@ -109,10 +109,16 @@ function main() {
 		initGraphics();
 		initVariables();	 
 		// Check interval for value
-		if (c >= 2.25 || c <= -2.25)
-			alert("Input must be < 2.25 and > -2.25");
-		else
-		{ initCompute();
+		if (c >= 2.25 || c <= -2.25){
+			var alert = document.getElementById('alert');
+			alert.classList.remove('d-none');
+		}else
+		{ 
+			var alert = document.getElementById('alert');
+			if(!(alert.classList.contains('d-none'))){
+				alert.classList.add('d-none');
+			}
+			initCompute();
 			drawPath();
 		}
 	};
@@ -245,7 +251,7 @@ function initGraphics() {
 		ctx.lineWidth = 0.5;
 		ctx.arc((xc[j]*scale)+(width-edge)/2+edge, -(yc[j]*scale)+(height-edge)/2, radius*scale, 0, 2 * Math.PI, false);
 		if (j == 0){
-			ctx.fillStyle = '#3BC14A';
+			ctx.fillStyle = '#f25f5c';
 		}else if (j == 1){
 			ctx.fillStyle = '#ffe066';
 		}else{
